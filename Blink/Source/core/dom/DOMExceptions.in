@@ -1,0 +1,8 @@
+namespace=Exception
+
+core/dom/DOMCoreException
+core/dom/EventException
+core/fileapi/FileException
+modules/webdatabase/SQLException
+core/svg/SVGException conditional=SVG
+core/xml/XPathException

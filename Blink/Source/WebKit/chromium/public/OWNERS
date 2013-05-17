@@ -1,0 +1,10 @@
+set noparent
+abarth@chromium.org
+dglazkov@chromium.org
+darin@chromium.org
+jamesr@chromium.org
+tkent@chromium.org
+
+# Eric is re-writing the RuntimeFeatures system:
+# https://code.google.com/p/chromium/issues/detail?id=237740
+per-file (WebRuntimeFeatures.*)=eseidel@chromium.org

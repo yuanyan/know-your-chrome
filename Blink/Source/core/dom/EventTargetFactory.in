@@ -1,0 +1,44 @@
+namespace="EventTarget"
+
+core/css/FontLoader
+core/dom/MessagePort
+core/dom/Node
+core/fileapi/FileReader
+core/html/MediaController
+core/html/track/TextTrack
+core/html/track/TextTrackCue
+core/html/track/TextTrackList
+core/loader/appcache/DOMApplicationCache
+core/page/DOMWindow
+core/page/EventSource
+core/page/Performance
+core/svg/SVGElementInstance conditional=SVG
+core/workers/DedicatedWorkerContext
+core/workers/SharedWorker
+core/workers/SharedWorkerContext
+core/workers/Worker
+core/xml/XMLHttpRequest
+core/xml/XMLHttpRequestUpload
+modules/battery/BatteryManager conditional=BATTERY_STATUS
+modules/encryptedmedia/MediaKeySession conditional=ENCRYPTED_MEDIA_V2
+modules/filesystem/FileWriter
+modules/indexeddb/IDBDatabase
+modules/indexeddb/IDBOpenDBRequest
+modules/indexeddb/IDBRequest
+modules/indexeddb/IDBTransaction
+modules/mediasource/MediaSource
+modules/mediasource/SourceBufferList
+modules/mediastream/MediaStream
+modules/mediastream/MediaStreamTrack
+modules/mediastream/RTCDataChannel
+modules/mediastream/RTCDTMFSender
+modules/mediastream/RTCPeerConnection
+modules/notifications/Notification conditional=NOTIFICATIONS|LEGACY_NOTIFICATIONS
+modules/speech/SpeechRecognition
+modules/speech/SpeechSynthesisUtterance
+modules/webaudio/AudioContext conditional=WEB_AUDIO
+modules/webaudio/ScriptProcessorNode conditional=WEB_AUDIO
+modules/webmidi/MIDIInput
+modules/webmidi/MIDIPort
+modules/websockets/WebSocket
+WebKitNamedFlow interfaceName=NamedFlow

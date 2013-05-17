@@ -1,0 +1,209 @@
+/*
+ * Copyright (C) 2006, 2007, 2009 Apple Inc. All rights reserved.
+ * Copyright (C) 2006 Samuel Weinig <sam.weinig@gmail.com>
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public License
+ * along with this library; see the file COPYING.LIB.  If not, write to
+ * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
+ */
+
+[
+    CustomToV8,
+    SkipVTableValidation
+] interface Element : Node {
+
+    // DOM Level 1 Core
+
+    [TreatReturnedNullStringAs=Null, PerWorldBindings] readonly attribute DOMString tagName;
+
+    [TreatReturnedNullStringAs=Null] DOMString getAttribute([Default=Undefined] optional DOMString name);
+     [RaisesException] void setAttribute([Default=Undefined] optional DOMString name,
+                                     [Default=Undefined] optional DOMString value);
+    void removeAttribute([Default=Undefined] optional DOMString name);
+    Attr getAttributeNode([Default=Undefined] optional DOMString name);
+    [RaisesException] Attr setAttributeNode([Default=Undefined] optional Attr newAttr);
+    [RaisesException] Attr removeAttributeNode([Default=Undefined] optional Attr oldAttr);
+    [PerWorldBindings] NodeList getElementsByTagName([Default=Undefined] optional DOMString name);
+
+    // For ObjC this is defined on Node for legacy support.
+    [PerWorldBindings] readonly attribute NamedNodeMap     attributes;
+    boolean            hasAttributes();
+
+    // DOM Level 2 Core
+
+     DOMString getAttributeNS([TreatNullAs=NullString,Default=Undefined] optional DOMString namespaceURI,
+                                            [Default=Undefined] optional DOMString localName);
+     [RaisesException] void setAttributeNS([TreatNullAs=NullString,Default=Undefined] optional DOMString namespaceURI,
+                                       [Default=Undefined] optional DOMString qualifiedName,
+                                       [Default=Undefined] optional DOMString value);
+     void removeAttributeNS([TreatNullAs=NullString] DOMString namespaceURI,
+                                          DOMString localName);
+     NodeList getElementsByTagNameNS([TreatNullAs=NullString,Default=Undefined] optional DOMString namespaceURI,
+                                                   [Default=Undefined] optional DOMString localName);
+     Attr getAttributeNodeNS([TreatNullAs=NullString,Default=Undefined] optional DOMString namespaceURI,
+                                           [Default=Undefined] optional DOMString localName);
+    [RaisesException] Attr setAttributeNodeNS([Default=Undefined] optional Attr newAttr);
+    boolean hasAttribute(DOMString name);
+     boolean hasAttributeNS([TreatNullAs=NullString,Default=Undefined] optional DOMString namespaceURI,
+                                          [Default=Undefined] optional DOMString localName);
+
+    [PerWorldBindings] readonly attribute CSSStyleDeclaration style;
+
+    // Common extensions
+
+    [PerWorldBindings] readonly attribute long offsetLeft;
+    [PerWorldBindings] readonly attribute long offsetTop;
+    [PerWorldBindings] readonly attribute long offsetWidth;
+    [PerWorldBindings] readonly attribute long offsetHeight;
+    [ImplementedAs=bindingsOffsetParent, PerWorldBindings] readonly attribute Element offsetParent;
+    [PerWorldBindings] readonly attribute long clientLeft;
+    [PerWorldBindings] readonly attribute long clientTop;
+    [PerWorldBindings] readonly attribute long clientWidth;
+    [PerWorldBindings] readonly attribute long clientHeight;
+             [PerWorldBindings] attribute long scrollLeft;
+             [PerWorldBindings] attribute long scrollTop;
+    [PerWorldBindings] readonly attribute long scrollWidth;
+    [PerWorldBindings] readonly attribute long scrollHeight;
+
+    void focus();
+    void blur();
+    void scrollIntoView(optional boolean alignWithTop);
+
+    // WebKit extensions
+
+    void scrollIntoViewIfNeeded(optional boolean centerIfNeeded);
+    void scrollByLines([Default=Undefined] optional long lines);
+    void scrollByPages([Default=Undefined] optional long pages);
+
+    // HTML 5
+    NodeList getElementsByClassName([Default=Undefined] optional DOMString name);
+
+    [Reflect=class, PerWorldBindings] attribute DOMString className;
+    [PerWorldBindings] readonly attribute DOMTokenList classList;
+
+    [PerWorldBindings] readonly attribute DOMStringMap dataset;
+
+    // NodeSelector - Selector API
+    [RaisesException] Element querySelector(DOMString selectors);
+    [RaisesException] NodeList querySelectorAll(DOMString selectors);
+
+    // WebKit extension, pending specification.
+    [RaisesException] boolean webkitMatchesSelector([Default=Undefined] optional DOMString selectors);
+
+    // ElementTraversal API
+    [PerWorldBindings] readonly attribute Element firstElementChild;
+    [PerWorldBindings] readonly attribute Element lastElementChild;
+    [PerWorldBindings] readonly attribute Element previousElementSibling;
+    [PerWorldBindings] readonly attribute Element nextElementSibling;
+    [PerWorldBindings] readonly attribute unsigned long childElementCount;
+
+    // ShadowAware API
+    [Reflect=pseudo, ImplementedAs=pseudo, PerWorldBindings] attribute DOMString webkitPseudo;
+    [ImplementedAs=createShadowRoot, RaisesException] ShadowRoot webkitCreateShadowRoot();
+    [ImplementedAs=shadowRoot, PerWorldBindings] readonly attribute ShadowRoot webkitShadowRoot;
+    [ImplementedAs=insertionParentForBinding, PerWorldBindings] readonly attribute Node webkitInsertionParent;
+
+    // DOM 4
+    [RaisesException] void remove();
+
+    // CSSOM View Module API
+    ClientRectList getClientRects();
+    ClientRect getBoundingClientRect();
+
+    // Mozilla version
+    const unsigned short ALLOW_KEYBOARD_INPUT = 1;
+    [EnabledAtRuntime=fullscreen] void webkitRequestFullScreen([Default=Undefined] optional unsigned short flags);
+
+    // W3C version
+    [EnabledAtRuntime=fullscreen] void webkitRequestFullscreen();
+
+    void webkitRequestPointerLock();
+
+    // CSS Regions API
+    [EnabledAtRuntime=cssRegions, PerWorldBindings] readonly attribute DOMString webkitRegionOverset;
+    [EnabledAtRuntime=cssRegions] sequence<Range> webkitGetRegionFlowRanges();
+
+    // Event handler DOM attributes
+    [NotEnumerable, PerWorldBindings] attribute EventListener onabort;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onblur;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onchange;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onclick;
+    [NotEnumerable, PerWorldBindings] attribute EventListener oncontextmenu;
+    [NotEnumerable, PerWorldBindings] attribute EventListener ondblclick;
+    [NotEnumerable, PerWorldBindings] attribute EventListener ondrag;
+    [NotEnumerable, PerWorldBindings] attribute EventListener ondragend;
+    [NotEnumerable, PerWorldBindings] attribute EventListener ondragenter;
+    [NotEnumerable, PerWorldBindings] attribute EventListener ondragleave;
+    [NotEnumerable, PerWorldBindings] attribute EventListener ondragover;
+    [NotEnumerable, PerWorldBindings] attribute EventListener ondragstart;
+    [NotEnumerable, PerWorldBindings] attribute EventListener ondrop;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onerror;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onfocus;
+    [NotEnumerable, PerWorldBindings] attribute EventListener oninput;
+    [NotEnumerable, PerWorldBindings] attribute EventListener oninvalid;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onkeydown;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onkeypress;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onkeyup;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onload;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onmousedown;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onmousemove;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onmouseout;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onmouseover;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onmouseup;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onmousewheel;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onscroll;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onselect;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onsubmit;
+
+    // attribute [NotEnumerable] EventListener oncanplay;
+    // attribute [NotEnumerable] EventListener oncanplaythrough;
+    // attribute [NotEnumerable] EventListener ondurationchange;
+    // attribute [NotEnumerable] EventListener onemptied;
+    // attribute [NotEnumerable] EventListener onended;
+    // attribute [NotEnumerable] EventListener onloadeddata;
+    // attribute [NotEnumerable] EventListener onloadedmetadata;
+    // attribute [NotEnumerable] EventListener onloadstart;
+    // attribute [NotEnumerable] EventListener onpause;
+    // attribute [NotEnumerable] EventListener onplay;
+    // attribute [NotEnumerable] EventListener onplaying;
+    // attribute [NotEnumerable] EventListener onprogress;
+    // attribute [NotEnumerable] EventListener onratechange;
+    // attribute [NotEnumerable] EventListener onreadystatechange;
+    // attribute [NotEnumerable] EventListener onseeked;
+    // attribute [NotEnumerable] EventListener onseeking;
+    // attribute [NotEnumerable] EventListener onshow;
+    // attribute [NotEnumerable] EventListener onstalled;
+    // attribute [NotEnumerable] EventListener onsuspend;
+    // attribute [NotEnumerable] EventListener ontimeupdate;
+    // attribute [NotEnumerable] EventListener onvolumechange;
+    // attribute [NotEnumerable] EventListener onwaiting;
+
+    // WebKit extensions
+    [NotEnumerable, PerWorldBindings] attribute EventListener onbeforecut;
+    [NotEnumerable, PerWorldBindings] attribute EventListener oncut;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onbeforecopy;
+    [NotEnumerable, PerWorldBindings] attribute EventListener oncopy;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onbeforepaste;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onpaste;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onreset;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onsearch;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onselectstart;
+    [NotEnumerable, EnabledAtRuntime=touch, PerWorldBindings] attribute EventListener ontouchstart;
+    [NotEnumerable, EnabledAtRuntime=touch, PerWorldBindings] attribute EventListener ontouchmove;
+    [NotEnumerable, EnabledAtRuntime=touch, PerWorldBindings] attribute EventListener ontouchend;
+    [NotEnumerable, EnabledAtRuntime=touch, PerWorldBindings] attribute EventListener ontouchcancel;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onwebkitfullscreenchange;
+    [NotEnumerable, PerWorldBindings] attribute EventListener onwebkitfullscreenerror;
+};
+

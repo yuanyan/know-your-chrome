@@ -1,0 +1,61 @@
+namespace="Event"
+
+Event
+Events interfaceName=Event
+HTMLEvents interfaceName=Event
+core/dom/BeforeLoadEvent
+modules/websockets/CloseEvent
+CompositionEvent
+CustomEvent
+ErrorEvent
+FocusEvent
+HashChangeEvent
+KeyboardEvent
+KeyboardEvents interfaceName=KeyboardEvent
+MessageEvent
+MouseEvent
+MouseEvents interfaceName=MouseEvent
+MutationEvent
+MutationEvents interfaceName=MutationEvent
+OverflowEvent
+PageTransitionEvent
+PopStateEvent
+ProgressEvent
+TextEvent
+TransitionEvent
+UIEvent
+UIEvents interfaceName=UIEvent
+WebKitAnimationEvent interfaceName=AnimationEvent
+WebKitTransitionEvent interfaceName=TransitionEvent
+WheelEvent
+core/xml/XMLHttpRequestProgressEvent
+modules/webaudio/AudioProcessingEvent conditional=WEB_AUDIO
+modules/webaudio/OfflineAudioCompletionEvent conditional=WEB_AUDIO
+modules/mediastream/MediaStreamEvent
+modules/mediastream/MediaStreamTrackEvent
+modules/mediastream/RTCIceCandidateEvent
+modules/mediastream/RTCDataChannelEvent
+modules/mediastream/RTCDTMFToneChangeEvent
+core/page/SpeechInputEvent conditional=INPUT_SPEECH
+modules/speech/SpeechRecognitionError
+modules/speech/SpeechRecognitionEvent
+modules/speech/SpeechSynthesisEvent
+core/html/canvas/WebGLContextEvent conditional=WEBGL
+core/storage/StorageEvent
+core/svg/SVGEvents interfaceName=Event, conditional=SVG
+core/svg/SVGZoomEvent conditional=SVG
+core/svg/SVGZoomEvents interfaceName=SVGZoomEvent, conditional=SVG
+modules/indexeddb/IDBVersionChangeEvent
+TouchEvent runtimeConditional=touchEnabled
+modules/device_orientation/DeviceMotionEvent
+core/dom/DeviceOrientationEvent
+OrientationEvent interfaceName=Event, conditional=ORIENTATION_EVENTS
+core/html/MediaKeyEvent conditional=ENCRYPTED_MEDIA
+MediaKeyMessageEvent conditional=ENCRYPTED_MEDIA_V2
+MediaKeyNeededEvent conditional=ENCRYPTED_MEDIA_V2
+core/html/track/TrackEvent
+core/dom/AutocompleteErrorEvent
+core/css/CSSFontFaceLoadEvent
+SecurityPolicyViolationEvent
+modules/webmidi/MIDIConnectionEvent
+modules/webmidi/MIDIMessageEvent

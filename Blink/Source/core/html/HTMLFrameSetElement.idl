@@ -1,0 +1,52 @@
+/*
+ * Copyright (C) 2006, 2007, 2009, 2010 Apple Inc. All rights reserve
+ * Copyright (C) 2006 Samuel Weinig <sam.weinig@gmail.com>
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public License
+ * along with this library; see the file COPYING.LIB.  If not, write to
+ * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
+ */
+
+[
+    CustomNamedGetter
+] interface HTMLFrameSetElement : HTMLElement {
+    [Reflect] attribute DOMString cols;
+    [Reflect] attribute DOMString rows;
+
+    // Event handler attributes
+    [NotEnumerable] attribute EventListener onbeforeunload;
+    [NotEnumerable] attribute EventListener onhashchange;
+    [NotEnumerable] attribute EventListener onmessage;
+    [NotEnumerable] attribute EventListener onoffline;
+    [NotEnumerable] attribute EventListener ononline;
+    [NotEnumerable] attribute EventListener onpopstate;
+    [NotEnumerable] attribute EventListener onresize;
+    [NotEnumerable] attribute EventListener onstorage;
+    [NotEnumerable] attribute EventListener onunload;
+
+    [Conditional=ORIENTATION_EVENTS, NotEnumerable] attribute EventListener onorientationchange;
+
+    // Overrides of Element attributes (with different implementation in bindings).
+    [NotEnumerable] attribute EventListener onblur;
+    [NotEnumerable] attribute EventListener onerror;
+    [NotEnumerable] attribute EventListener onfocus;
+    [NotEnumerable] attribute EventListener onload;
+
+    // Not implemented yet.
+    // attribute [NotEnumerable] EventListener onafterprint;
+    // attribute [NotEnumerable] EventListener onbeforeprint;
+    // attribute [NotEnumerable] EventListener onredo;
+    // attribute [NotEnumerable] EventListener onundo;
+};
+

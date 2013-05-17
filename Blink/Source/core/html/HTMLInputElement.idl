@@ -1,0 +1,100 @@
+/*
+ * Copyright (C) 2006, 2010 Apple Inc. All rights reserved.
+ * Copyright (C) 2006 Samuel Weinig <sam.weinig@gmail.com>
+ * Copyright (C) 2012 Samsung Electronics. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public License
+ * along with this library; see the file COPYING.LIB.  If not, write to
+ * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
+ */
+
+[
+    SkipVTableValidation
+] interface HTMLInputElement : HTMLElement {
+    [Reflect] attribute DOMString accept;
+    [Reflect] attribute DOMString alt;
+    [Reflect] attribute DOMString autocomplete;
+    [Reflect] attribute boolean autofocus;
+    [Reflect=checked] attribute boolean defaultChecked;
+    attribute boolean checked;
+    [Reflect] attribute DOMString dirName;
+    [Reflect] attribute boolean disabled;
+    readonly attribute HTMLFormElement form;
+    attribute FileList files;
+    [Reflect, URL] attribute DOMString formAction;
+    [TreatNullAs=NullString] attribute DOMString formEnctype;
+    [TreatNullAs=NullString] attribute DOMString formMethod;
+    [Reflect] attribute boolean formNoValidate;
+    [Reflect] attribute DOMString formTarget;
+    attribute unsigned long height;
+    attribute boolean indeterminate;
+    [Conditional=DATALIST_ELEMENT] readonly attribute HTMLElement list;
+    [Reflect] attribute DOMString max;
+    [SetterRaisesException] attribute long maxLength;
+    [Reflect] attribute DOMString min;
+    [Reflect] attribute boolean multiple;
+    [Reflect] attribute DOMString name;
+    [Reflect] attribute DOMString pattern;
+    [Reflect] attribute DOMString placeholder;
+    [Reflect] attribute boolean readOnly;
+    [Reflect] attribute boolean required;
+    [SetterRaisesException] attribute unsigned long size; // Changed string -> long -> unsigned long
+    [Reflect, URL] attribute DOMString src;
+    [Reflect] attribute DOMString step;
+    [TreatNullAs=NullString] attribute DOMString type; // readonly dropped as part of DOM level 2
+    [TreatNullAs=NullString] attribute DOMString defaultValue;
+    // See the discussion in https://bugs.webkit.org/show_bug.cgi?id=100085
+    [TreatNullAs=NullString, SetterRaisesException] attribute DOMString value;
+    [SetterRaisesException] attribute Date valueAsDate;
+    [SetterRaisesException] attribute double valueAsNumber;
+
+    [RaisesException] void stepUp(optional long n);
+    [RaisesException] void stepDown(optional long n);
+
+    attribute unsigned long width;
+    readonly attribute boolean willValidate;
+    readonly attribute ValidityState validity;
+    readonly attribute DOMString validationMessage;
+    boolean checkValidity();
+    void setCustomValidity([TreatNullAs=NullString, TreatUndefinedAs=NullString] DOMString error);
+
+    readonly attribute NodeList labels;
+
+    void select();
+    [Custom] attribute long selectionStart;
+    [Custom] attribute long selectionEnd;
+    [Custom] attribute DOMString selectionDirection;
+
+    [RaisesException] void setRangeText(DOMString replacement);
+    [RaisesException] void setRangeText(DOMString replacement,
+                        unsigned long start,
+                        unsigned long end,
+                        [Default=NullString] optional DOMString selectionMode);
+
+    [Custom] void setSelectionRange([Default=Undefined] optional long start,
+                                    [Default=Undefined] optional long end,
+                                    optional DOMString direction);
+
+    // Non-standard attributes
+    [Reflect] attribute DOMString align;
+    [Reflect, EnabledAtRuntime=directoryUpload] attribute boolean webkitdirectory;
+    [Reflect] attribute DOMString useMap;
+    [Reflect] attribute boolean incremental;
+    [Conditional=INPUT_SPEECH, Reflect, EnabledAtRuntime=speechInput] attribute boolean webkitSpeech;
+    [Conditional=INPUT_SPEECH, Reflect, EnabledAtRuntime=speechInput] attribute boolean webkitGrammar;
+    [Conditional=INPUT_SPEECH, NotEnumerable] attribute EventListener onwebkitspeechchange;
+
+    // See http://www.w3.org/TR/html-media-capture/
+    [Conditional=MEDIA_CAPTURE] attribute DOMString capture;
+};
