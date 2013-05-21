@@ -19,3 +19,5 @@
 * https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html
 * https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html
 * https://dvcs.w3.org/hg/FXTF/raw-file/default/web-anim/index.html
+* http://w3c-test.org/webperf/specs/UserTiming/
+* http://www.w3.org/TR/2011/WD-resource-timing-20110524/
