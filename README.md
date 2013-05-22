@@ -2,7 +2,7 @@
 
 ## Chrome 新特性示例
 
-* https://html5-demos.appspot.com/
+* [HTML5 DEMOS](https://html5-demos.appspot.com/)
 
 
 ## Blink 实现规划
@@ -11,8 +11,8 @@
 
 ## Chrome 源码解析
 
-* Blink 源码解析
-* V8 源码解析
+* [Blink 源码解析](https://github.com/yuanyan/kownyourchrome/tree/master/Blink)
+* [V8 源码解析](https://github.com/yuanyan/kownyourchrome/tree/master/V8)
 
 ## W3C 新规范
 * http://dev.w3.org/csswg/css-fonts/
