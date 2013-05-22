@@ -15,12 +15,16 @@
 * [V8 源码解析](https://github.com/yuanyan/kownyourchrome/tree/master/V8)
 
 ## W3C 新规范
-* http://dev.w3.org/csswg/css-fonts/
-* https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html
-* https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html
-* https://dvcs.w3.org/hg/FXTF/raw-file/default/web-anim/index.html
-* http://w3c-test.org/webperf/specs/UserTiming/
-* http://www.w3.org/TR/2011/WD-resource-timing-20110524/
+* [CSS Fonts](http://dev.w3.org/csswg/css-fonts/)
+* [Shadow DOM](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html) 
+  * DOM & style encapsulation boundaries
+* [Custom Elements](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html)
+  * create new HTML elements - expand HTML's existing vocabulary
+  * extend existing DOM objects with new imperative APIs
+* [HTML Imports](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html)
+* [Web Animations](https://dvcs.w3.org/hg/FXTF/raw-file/default/web-anim/index.html)
+* [User Timing](http://w3c-test.org/webperf/specs/UserTiming/)
+* [Resource Timing](http://www.w3.org/TR/2011/WD-resource-timing-20110524/)
 
 ## Chrome 新特性
 * [Lazy block layout](https://docs.google.com/document/d/1-tbcMJV8wNbX2g5ehNIcE_1W7Kj_B3g9w1BrUgHnh3U/edit)
