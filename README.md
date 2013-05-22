@@ -15,12 +15,13 @@
 * [V8 源码解析](https://github.com/yuanyan/kownyourchrome/tree/master/V8)
 
 ## W3C 新规范
-* [CSS Fonts](http://dev.w3.org/csswg/css-fonts/)
 * [Shadow DOM](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html) 
   * DOM & style encapsulation boundaries
 * [Custom Elements](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html)
   * create new HTML elements - expand HTML's existing vocabulary
   * extend existing DOM objects with new imperative APIs
+* [HTML Templates](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html)
+  * inert chunks of clonable DOM. Can be activated for later use (e.g. MDV)  
 * [HTML Imports](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html)
 * [Web Animations](https://dvcs.w3.org/hg/FXTF/raw-file/default/web-anim/index.html)
 * [User Timing](http://w3c-test.org/webperf/specs/UserTiming/)
@@ -37,6 +38,8 @@
   color: var(main-color);
 }
 ```
+* [CSS Fonts](http://dev.w3.org/csswg/css-fonts/)
+* [CSS Flexible Box Layout Module](http://dev.w3.org/csswg/css-flexbox/)
 
 ## Chrome 新特性
 * [Lazy block layout](https://docs.google.com/document/d/1-tbcMJV8wNbX2g5ehNIcE_1W7Kj_B3g9w1BrUgHnh3U/edit)
