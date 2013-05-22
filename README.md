@@ -25,7 +25,20 @@
 * [Web Animations](https://dvcs.w3.org/hg/FXTF/raw-file/default/web-anim/index.html)
 * [User Timing](http://w3c-test.org/webperf/specs/UserTiming/)
 * [Resource Timing](http://www.w3.org/TR/2011/WD-resource-timing-20110524/)
+* [CSS Variables Module Level 1](http://dev.w3.org/csswg/css-variables/)
+
+```css
+:root {
+  var-main-color: #06c;
+  var-accent-color: #006;
+}
+/* The rest of the CSS file */
+#foo h1 {
+  color: var(main-color);
+}
+```
 
 ## Chrome 新特性
 * [Lazy block layout](https://docs.google.com/document/d/1-tbcMJV8wNbX2g5ehNIcE_1W7Kj_B3g9w1BrUgHnh3U/edit)
 * [Moving DOM Attributes to JavaScript Prototype Chains](https://docs.google.com/document/d/1jwA8mtClwxI-QJuHT7872Z0pxpZz8PBkf2bGAbsUtqs/edit#)
+
