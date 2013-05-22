@@ -23,20 +23,24 @@
 * [HTML Templates](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html)
   * inert chunks of clonable DOM. Can be activated for later use (e.g. MDV)  
 * [HTML Imports](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html)
+
+  ```html
+  <link rel="import" href="x-foo.html">
+  ```
 * [Web Animations](https://dvcs.w3.org/hg/FXTF/raw-file/default/web-anim/index.html)
 * [User Timing](http://w3c-test.org/webperf/specs/UserTiming/)
 * [Resource Timing](http://www.w3.org/TR/2011/WD-resource-timing-20110524/)
 * [CSS Variables Module Level 1](http://dev.w3.org/csswg/css-variables/)
 
-```css
-:root {
-  var-main-color: #06c;
-  var-accent-color: #006;
-}
-/* The rest of the CSS file */
-#foo h1 {
-  color: var(main-color);
-}
+  ```css
+  :root {
+    var-main-color: #06c;
+    var-accent-color: #006;
+  }
+  /* The rest of the CSS file */
+  #foo h1 {
+    color: var(main-color);
+  }
 ```
 * [CSS Fonts](http://dev.w3.org/csswg/css-fonts/)
 * [CSS Flexible Box Layout Module](http://dev.w3.org/csswg/css-flexbox/)
