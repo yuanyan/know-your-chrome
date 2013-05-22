@@ -1,6 +1,6 @@
 # Kown your chrome
 
-## 新特性示例
+## Chrome 新特性示例
 
 * https://html5-demos.appspot.com/
 
@@ -21,3 +21,7 @@
 * https://dvcs.w3.org/hg/FXTF/raw-file/default/web-anim/index.html
 * http://w3c-test.org/webperf/specs/UserTiming/
 * http://www.w3.org/TR/2011/WD-resource-timing-20110524/
+
+## Chrome 新特性
+* [Lazy block layout](https://docs.google.com/document/d/1-tbcMJV8wNbX2g5ehNIcE_1W7Kj_B3g9w1BrUgHnh3U/edit)
+* [Moving DOM Attributes to JavaScript Prototype Chains](https://docs.google.com/document/d/1jwA8mtClwxI-QJuHT7872Z0pxpZz8PBkf2bGAbsUtqs/edit#)
