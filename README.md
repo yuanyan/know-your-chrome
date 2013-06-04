@@ -1,6 +1,6 @@
 # Kown your chrome
 
-## Chrome 新特性示例
+## Chrome 新特性演示
 
 * [HTML5 DEMOS](https://html5-demos.appspot.com/)
 
