@@ -1,6 +1,6 @@
 ## 源码目录结构
 
-···sh
+```sh
 V8
 ├─benchmarks
 │  └─spinning-balls
