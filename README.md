@@ -54,3 +54,4 @@
 
 ## 文章
 * [How Browsers Work: Behind the scenes of modern web browsers](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
+* [理解WebKit和Chromium](http://www.ituring.com.cn/minibook/705)
