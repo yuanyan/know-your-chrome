@@ -53,6 +53,9 @@
 * [Compositing in Blink and WebKit](http://www.youtube.com/watch?v=Lpk1dYdo62o)
 * [WebComponents are the Future](http://www.youtube.com/watch?v=eJZx9c6YL8k)
 
+> Web Components are going to fundamentally change the way we think, build, and consume web apps. ShadowDOM, Mutation Observers, custom elements, MDV, Object.observe(), CSS. How does it all fit together?
+> This session will prepare you for the future of the web platform by discussing the fundamentals of web components and how we can use them today with frameworks like AngularJS.
+
 ## 文章
 * [How Browsers Work: Behind the scenes of modern web browsers](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)  [中文](http://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/)
 * [理解WebKit和Chromium](http://www.ituring.com.cn/minibook/705)
