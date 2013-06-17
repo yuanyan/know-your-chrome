@@ -51,6 +51,9 @@
 
 ## 视频
 * [Compositing in Blink and WebKit](http://www.youtube.com/watch?v=Lpk1dYdo62o)
+
+> Blink and WebKit use a compositor to display web contents to the user's screen. But how do we take a render tree (the browser's internal representation of a web page) and display it using a compositor? How do we decide what content should have a separate compositing layer, and how does compositing benefit us? In this presentation, Chrome software engineer Shawn Singh will introduce basic concepts of compositing, and then we will focus on how Blink bridges the gap between the render tree and the compositor. This is only a slice of the overall rendering architecture, but it will be fun and insightful for any web developers and browser developers with an interest in how Blink and WebKit render web pages.
+
 * [WebComponents are the Future](http://www.youtube.com/watch?v=eJZx9c6YL8k)
 
 > Web Components are going to fundamentally change the way we think, build, and consume web apps. ShadowDOM, Mutation Observers, custom elements, MDV, Object.observe(), CSS. How does it all fit together?
