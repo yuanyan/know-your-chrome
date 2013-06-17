@@ -51,6 +51,7 @@
 
 ## 视频
 * [Compositing in Blink and WebKit](http://www.youtube.com/watch?v=Lpk1dYdo62o)
+* [WebComponents are the Future](http://www.youtube.com/watch?v=eJZx9c6YL8k)
 
 ## 文章
 * [How Browsers Work: Behind the scenes of modern web browsers](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)  [中文](http://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/)
