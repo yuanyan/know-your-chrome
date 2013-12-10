@@ -63,3 +63,4 @@
 * [How Browsers Work: Behind the scenes of modern web browsers](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)  [中文](http://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/)
 * [理解WebKit和Chromium](http://www.ituring.com.cn/minibook/705)
 * [GPU Accelerated Compositing in Chrome](http://www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome)
+* [Accelerated Rendering in Chrome](http://www.html5rocks.com/en/tutorials/speed/layers/) [Chrome 渲染优化 - 层模型](http://www.oschina.net/translate/chrome-accelerated-rendering)
