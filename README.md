@@ -1,4 +1,4 @@
-# Kown your chrome
+# Know your chrome 深入Chrome
 
 ## Chrome 新特性演示
 
