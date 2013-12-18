@@ -1,5 +1,9 @@
 # 深入Chrome
 
+## 源码
+
+* [Chromium在线源码](https://code.google.com/p/chromium/codesearch#chromium/src/&sq=package:chromium)
+
 ## Chrome 新特性演示
 
 * [HTML5 DEMOS](https://html5-demos.appspot.com/)
