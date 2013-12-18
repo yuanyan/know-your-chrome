@@ -50,8 +50,7 @@
 * [Moving DOM Attributes to JavaScript Prototype Chains](https://docs.google.com/document/d/1jwA8mtClwxI-QJuHT7872Z0pxpZz8PBkf2bGAbsUtqs/edit#)
 
 ## 视频
-* [Compositing in Blink and WebKit](http://www.youtube.com/watch?v=Lpk1dYdo62o)
-
+* [Compositing in Blink and WebKit](http://www.youtube.com/watch?v=Lpk1dYdo62o) [幻灯片](https://docs.google.com/presentation/d/163Zkxgon7-CAZjNuOZxwOFlLX6h15Ju-GNtdKbD-9Tg/edit?usp=sharing)
 > Blink and WebKit use a compositor to display web contents to the user's screen. But how do we take a render tree (the browser's internal representation of a web page) and display it using a compositor? How do we decide what content should have a separate compositing layer, and how does compositing benefit us? In this presentation, Chrome software engineer Shawn Singh will introduce basic concepts of compositing, and then we will focus on how Blink bridges the gap between the render tree and the compositor. This is only a slice of the overall rendering architecture, but it will be fun and insightful for any web developers and browser developers with an interest in how Blink and WebKit render web pages.
 
 * [WebComponents are the Future](http://www.youtube.com/watch?v=eJZx9c6YL8k)
@@ -65,3 +64,5 @@
 * [GPU Accelerated Compositing in Chrome](http://www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome)
 ![Compositing with the GPU process](https://lh5.googleusercontent.com/fSqeRgpxD9mXzRypiiHU-kpG1ACEMufkHH95jRL_oWT3rGXZfPFNm8Kd89tKhd6NiZq7XlQ-75OSVgJbEtiGBBvITgCfxpvCVEAex08ustiMJ7rHVMw)
 * [Accelerated Rendering in Chrome](http://www.html5rocks.com/en/tutorials/speed/layers/) [Chrome 渲染优化 - 层模型](http://www.oschina.net/translate/chrome-accelerated-rendering)
+* [](http://dev.chromium.org/developers/design-documents)
+
