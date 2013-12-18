@@ -24,24 +24,26 @@
   * inert chunks of clonable DOM. Can be activated for later use (e.g. MDV)  
 * [HTML Imports](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html)
 
-  ```html
-  <link rel="import" href="x-foo.html">
-  ```
+```html
+<link rel="import" href="x-foo.html">
+```
+
 * [Web Animations](https://dvcs.w3.org/hg/FXTF/raw-file/default/web-anim/index.html)
 * [User Timing](http://w3c-test.org/webperf/specs/UserTiming/)
 * [Resource Timing](http://www.w3.org/TR/2011/WD-resource-timing-20110524/)
 * [CSS Variables Module Level 1](http://dev.w3.org/csswg/css-variables/)
 
-  ```css
-  :root {
-    var-main-color: #06c;
-    var-accent-color: #006;
-  }
-  /* The rest of the CSS file */
-  #foo h1 {
-    color: var(main-color);
-  }
+```css
+:root {
+  var-main-color: #06c;
+  var-accent-color: #006;
+}
+/* The rest of the CSS file */
+#foo h1 {
+  color: var(main-color);
+}
 ```
+
 * [CSS Fonts](http://dev.w3.org/csswg/css-fonts/)
 * [CSS Flexible Box Layout Module](http://dev.w3.org/csswg/css-flexbox/)
 
@@ -51,6 +53,7 @@
 
 ## 视频
 * [Compositing in Blink and WebKit](http://www.youtube.com/watch?v=Lpk1dYdo62o) [幻灯片](https://docs.google.com/presentation/d/163Zkxgon7-CAZjNuOZxwOFlLX6h15Ju-GNtdKbD-9Tg/edit?usp=sharing)
+
 > Blink and WebKit use a compositor to display web contents to the user's screen. But how do we take a render tree (the browser's internal representation of a web page) and display it using a compositor? How do we decide what content should have a separate compositing layer, and how does compositing benefit us? In this presentation, Chrome software engineer Shawn Singh will introduce basic concepts of compositing, and then we will focus on how Blink bridges the gap between the render tree and the compositor. This is only a slice of the overall rendering architecture, but it will be fun and insightful for any web developers and browser developers with an interest in how Blink and WebKit render web pages.
 
 * [WebComponents are the Future](http://www.youtube.com/watch?v=eJZx9c6YL8k)
@@ -64,5 +67,5 @@
 * [GPU Accelerated Compositing in Chrome](http://www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome)
 ![Compositing with the GPU process](https://lh5.googleusercontent.com/fSqeRgpxD9mXzRypiiHU-kpG1ACEMufkHH95jRL_oWT3rGXZfPFNm8Kd89tKhd6NiZq7XlQ-75OSVgJbEtiGBBvITgCfxpvCVEAex08ustiMJ7rHVMw)
 * [Accelerated Rendering in Chrome](http://www.html5rocks.com/en/tutorials/speed/layers/) [Chrome 渲染优化 - 层模型](http://www.oschina.net/translate/chrome-accelerated-rendering)
-* [](http://dev.chromium.org/developers/design-documents)
+* [Chrome Design Documents](http://dev.chromium.org/developers/design-documents)
 
